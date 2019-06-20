@@ -1,0 +1,4 @@
+imageRegistry: "127.0.0.1"
+dockerTag: "latest"
+pullPolicy: "Always"
+imageName: "static-site"

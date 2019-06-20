@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: {{.Chart.Name}}-pod
+    labels:
+        app: {{.Chart.Name}}
+spec:
+    containers:
+        - name: {{.Chart.Name}}-container
+          image: {{.Values.imageRegistry}}/{{.Values.imageName}}:{{.Values.dockerTag}}
+          imagePullPolicy: {{.Values.pullPolicy}}
+          ports:
+            - containerPort: 5000
